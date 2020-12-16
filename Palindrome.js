@@ -11,6 +11,8 @@ PROBLEM:
 
 'use strict';
 
+// Step 1 ---------------------------------------------------------------------------------------------------------------------------------
+
 //Checks if a given value is a string, if yes, invokes function InvokePalindrome, if not, invokes function ConverToString.
 function CheckPalindrome(variable) {
     if (typeof (variable) === "string") {
@@ -30,9 +32,11 @@ function ConvertToString(variable) {
 function ComparePalindrome(variable) {
     if (variable.toLowerCase() === ReverseString(variable.toLowerCase())) {
         console.log(`${variable} is a Palindrome`)
+        return true;
     }
     else {
         console.log(`${variable} is not a Palindrome`)
+        return false;
     }
 }
 
@@ -41,8 +45,28 @@ function ReverseString(variable) {
     return variable.split("").reverse().join("");
 }
 
-
+console.log("Step 1: ");
 CheckPalindrome("Racecar");
 CheckPalindrome(24424);
 CheckPalindrome(123321);
 CheckPalindrome("99899");
+
+
+
+
+// Step 2 --------------------------------------------------------------------------------------------------------------------------
+
+
+var Palindrome = function (variable) {
+    if (variable.toLowerCase() === ReverseString(variable.toLowerCase())) {
+        console.log(`${variable} is a Palindrome`)
+        return true;
+    }
+    else {
+        console.log(`${variable} is not a Palindrome`)
+        return false;
+    }
+}
+
+console.log("\nStep 2: ");
+Palindrome("Raul");
